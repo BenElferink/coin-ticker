@@ -72,7 +72,7 @@ export default function Home() {
       if (currPrice !== lastPrice) {
         const player = new Audio(currPrice > lastPrice ? '/media/coin-up.wav' : '/media/coin-down.wav')
         player.volume = volume
-        player.autoplay = true
+        player.play()
       }
     }
   }, [prices, volume])
