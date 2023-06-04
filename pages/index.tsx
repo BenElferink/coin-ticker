@@ -41,7 +41,7 @@ export default function Home() {
             quoteDecimalPlaces: number
           }) => {
             setMarketCap(formatTokenFromChainToHuman(data.marketCap, data.baseDecimalPlaces))
-            setChange24(Number(data.priceChange['24h']))
+            // setChange24(Number(data.priceChange['24h']))
             setPrices((prev) => {
               const payload = [...prev]
 
