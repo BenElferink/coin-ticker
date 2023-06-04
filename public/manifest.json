@@ -1,7 +1,7 @@
 {
   "short_name": "$BANK",
-  "name": "Coin Ticker: $BANK",
-  "description": "",
+  "name": "$BANK",
+  "description": "decorative coin ticker",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,7 +21,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#",
+  "theme_color": "#ca8a04",
   "background_color": "#000000",
   "developer": {
     "name": "Ben Elferink",
