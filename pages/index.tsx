@@ -78,10 +78,10 @@ export default function Home() {
   }, [prices, volume])
 
   return (
-    <main className={`min-h-screen p-10 flex flex-col items-center justify-between ${inter.className}`}>
+    <main className={`min-h-screen p-10 flex flex-col items-center justify-start ${inter.className}`}>
       <PromptModal text='Enable Sound FX?' onClickYes={() => setVolume(1)} onClickNo={() => setVolume(0)} />
 
-      <div className='ticker flex flex-col'>
+      <div className='mb-12 flex flex-col'>
         <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:blur-2xl after:content-[''] before:bg-gradient-to-br before:from-transparent before:to-amber-400/20 after:from-amber-400 after:via-amber-800/50 before:lg:h-[360px]">
           <Image
             className='relative drop-shadow-[0_0_0.3rem_#fde04780]'

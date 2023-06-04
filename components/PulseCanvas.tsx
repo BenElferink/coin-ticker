@@ -6,7 +6,7 @@ export default function PulseCanvas(props: {
   dataPoints: { price: number; ask: number; bid: number }[]
   withAskBid?: boolean
 }) {
-  const { dataPoints, withAskBid = false } = props
+  const { dataPoints = [], withAskBid = false } = props
 
   const canvasRef = useRef(null)
   const animationFrameId = useRef(0)
@@ -45,7 +45,7 @@ export default function PulseCanvas(props: {
 
       // this fixes a bug where on-mount price may be stable, and the chart would not display a pulse
       if (maxPrice && minPrice && maxPrice === minPrice) {
-        maxPrice += Number(`${String(minPrice)}1`)
+        minPrice -= Number(`${String(minPrice)}1`)
       }
 
       // generic calculators to get the X and Y positions for each dataPoints point
