@@ -63,7 +63,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main className={`min-h-screen p-10 flex flex-col items-center justify-start ${inter.className}`}>
+    <main className={`h-screen w-screen overflow-hidden p-10 flex flex-col items-center justify-start ${inter.className}`}>
       <div className='fixed top-4 left-4 z-50'>
         <AudioPlayer
           lastPrice={prices[prices.length - 2]?.price || 0}
