@@ -10,6 +10,7 @@ const AudioPlayer = (props: { lastPrice: number; currPrice: number }) => {
 
   useEffect(() => {
     if (player && playing && userClicked && currPrice && lastPrice && currPrice !== lastPrice) {
+      player.pause()
       player.src = currPrice > lastPrice ? '/media/coin-up.wav' : '/media/coin-down.wav'
       player.play()
     }
