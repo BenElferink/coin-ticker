@@ -36,10 +36,13 @@ export default function PulseCanvas(props: {
 
       // find the highest price, and lowest price in the current queue
       dataPoints.forEach(({ price, ask, bid }) => {
-        if ((withAskBid ? ask : price) > maxPrice || maxPrice === 0) {
-          maxPrice = withAskBid ? ask : price
-        } else if ((withAskBid ? bid : price) < minPrice || minPrice === 0) {
-          minPrice = withAskBid ? bid : price
+        const newMax = withAskBid ? Math.max(ask, price) : price
+        const newMin = withAskBid ? Math.min(bid, price) : price
+
+        if (newMax > maxPrice || maxPrice === 0) {
+          maxPrice = newMax
+        } else if (newMin < minPrice || minPrice === 0) {
+          minPrice = newMin
         }
       })
 
